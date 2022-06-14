@@ -13,8 +13,8 @@ public class Board {
         arr = new boolean[size][size];
         for(int i = 0; i < size; i++ ){
             for(int j = 0; j < size; j++){
-                //arr[i][j] = rand.nextInt(100) < 20;
-                arr[i][j] = false;
+                arr[i][j] = rand.nextInt(100) < 20;
+                //arr[i][j] = false;
             }
         }
 
@@ -57,7 +57,5 @@ public class Board {
     public void setBoardCell(int x, int y){
         arr[x][y] = true;
     }
-    public void setAllcellsFalse(){
 
-    }
 }
