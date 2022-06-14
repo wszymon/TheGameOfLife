@@ -5,6 +5,7 @@ import java.util.Random;
 public class Board {
     int size;
     boolean arr[][];
+
     Random rand = new Random();
 
     public Board(int size) {
@@ -12,9 +13,11 @@ public class Board {
         arr = new boolean[size][size];
         for(int i = 0; i < size; i++ ){
             for(int j = 0; j < size; j++){
-                arr[i][j] = rand.nextInt(100) < 20;
+                //arr[i][j] = rand.nextInt(100) < 20;
+                arr[i][j] = false;
             }
         }
+
     }
     public void show(){
         for(int i = 0; i < size; i++ ) {
@@ -50,5 +53,11 @@ public class Board {
                 changeState(i, j);
             }
         }
+    }
+    public void setBoardCell(int x, int y){
+        arr[x][y] = true;
+    }
+    public void setAllcellsFalse(){
+
     }
 }
